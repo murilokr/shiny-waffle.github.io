@@ -4,4 +4,13 @@ $(document).ready(function() {
   $('.button-collapse').sideNav();
   $('.parallax').parallax();
   $('select').material_select();
+  $('.dropdown-button').dropdown();
+  
+  // Listen for the course select dropdown.
+  $('#course-select').on('change', function() {
+		const url = $(this).val();
+		if (url) {
+			window.open(url, '_blank');
+		}
+  });
 });
