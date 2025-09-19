@@ -56,6 +56,11 @@ footer.page-footer {
   margin: 0;
 }
 
+.fisioterapia-green-card {
+	background-color: #006100; /* Dark Green */
+	color: white; /* Text color */
+}
+
 .inline-icon {
   height: 1em;          /* Matches the font size */
   vertical-align: middle; /* Aligns nicely with the text baseline */
