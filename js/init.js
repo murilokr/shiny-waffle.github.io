@@ -55,14 +55,14 @@ $(document).ready(function() {
   
 	// Step 1: Setup Data Array
 	const courses = [
-		{ name: "Biomedicina", url: "https://forms.gle/CmteZwHQDM6Gu15g6" },
-		{ name: "Ciência da Computação", url: "https://forms.gle/CmteZwHQDM6Gu15g6" },
+		{ name: "Biomedicina", url: "https://docs.google.com/forms/d/e/1FAIpQLScUuHZopEOKthiXAp1Vn31xU4KeOPcgG94cS3yaw3ue_q2VlQ/viewform?usp=header" },
+		{ name: "Ciência da Computação", url: "https://docs.google.com/forms/d/1XwEI_bnX_rMtgdCX-dNqy-I3Gx3WUyYkHJ97zT5XfCI/edit?usp=drivesdk" },
 		{ name: "Direito", url: "https://docs.google.com/forms/d/e/1FAIpQLSdCw-upWPVMYgpN6POuvdulxr172pCA_PXrqKxDPJl52orZuA/viewform?usp=header" },
 		{ name: "Educação Física", url: "https://docs.google.com/forms/d/e/1FAIpQLScvngS95jiAmKQy75Y6DMKvb9bHyk4H4wsVYuJd5wDmjtl2Ig/viewform?usp=preview" },
 		{ name: "Enfermagem", url: "https://forms.gle/MXg89q5avMVe1kay6" },
-		{ name: "Med. Veterinária", url: "https://forms.gle/CmteZwHQDM6Gu15g6" },
+		{ name: "Med. Veterinária", url: "https://forms.cloud.microsoft/r/LCEzyYdyyQ" },
 		{ name: "Odontologia", url: "https://forms.gle/fnAZZfLuaEQPwZHk6" },
-		{ name: "Psicologia", url: "https://forms.gle/CmteZwHQDM6Gu15g6" }
+		{ name: "Psicologia", url: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=79DCVaR0ikOmE2FgehPu4KYJYHdUgtlIm6FKyTqQ4CdUQTc0OVhUUFNHU0NWNFcxQlpZMkFQTldSRS4u" }
 	];
 	
 	// Step 2: Initialize any existing selects
