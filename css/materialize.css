@@ -2769,6 +2769,8 @@ video.responsive-video {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 100%;
+  will-change: transform;
 }
 
 .pin-top, .pin-bottom {

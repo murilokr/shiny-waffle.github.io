@@ -1,8 +1,10 @@
 // js/init.js
 // --- Helper to reinitialize Materialize select after updating options ---
-function reinitMaterialSelect($select) {
+function reinitMaterialSelect($select) 
+{
   // Materialize v0.98.x
-  if (typeof $.fn.material_select === 'function') {
+  if (typeof $.fn.material_select === 'function') 
+  {
     $select.material_select();
     return;
   }
@@ -20,7 +22,8 @@ function reinitMaterialSelect($select) {
 }
 
 // --- Helper to add multiple options at once ---
-function addOptionsBulk(selectSelector, items) {
+function addOptionsBulk(selectSelector, items) 
+{
   // items should be an array of {value:'...', text:'...', selected:true/false}
   var $sel = $(selectSelector);
 
@@ -37,8 +40,8 @@ function addOptionsBulk(selectSelector, items) {
 }
 
 
-
-$(document).ready(function() {
+$(document).ready(function() 
+{
 	console.log("DOM is ready, initializing selects...");
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
@@ -46,7 +49,8 @@ $(document).ready(function() {
 	$('.dropdown-button').dropdown();
 
 	// Listen for the course select dropdown.
-	$('#course-select').on('change', function() {
+	$('#course-select').on('change', function() 
+	{
 		const url = $(this).val();
 		if (url) {
 			window.open(url, '_blank');
@@ -54,7 +58,8 @@ $(document).ready(function() {
 	});	
   
 	// Step 1: Setup Data Array
-	const courses = [
+	const courses = 
+	[
 		{ name: "Biomedicina", url: "https://docs.google.com/forms/d/e/1FAIpQLScUuHZopEOKthiXAp1Vn31xU4KeOPcgG94cS3yaw3ue_q2VlQ/viewform?usp=header" },
 		{ name: "Ciência da Computação", url: "https://docs.google.com/forms/d/1XwEI_bnX_rMtgdCX-dNqy-I3Gx3WUyYkHJ97zT5XfCI/edit?usp=drivesdk" },
 		{ name: "Direito", url: "https://docs.google.com/forms/d/e/1FAIpQLSdCw-upWPVMYgpN6POuvdulxr172pCA_PXrqKxDPJl52orZuA/viewform?usp=header" },
