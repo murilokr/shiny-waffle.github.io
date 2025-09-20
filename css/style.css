@@ -23,9 +23,14 @@ p {
   line-height: 0;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+
+.parallax-container .section {
+width: 100%;
+}
+
+.parallax img {
+	display: flow;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -62,4 +67,16 @@ footer.page-footer {
 .inline-icon {
   height: 1em;          /* Matches the font size */
   vertical-align: middle; /* Aligns nicely with the text baseline */
+}
+
+/* Fixed height and always show vertical scrollbar */
+.select-wrapper ul.dropdown-content.select-dropdown {
+  max-height: calc(100vh * .4) !important; /* or whatever height you want */
+  min-height: calc(100vh * .4) !important; /* ensures it's always at least this tall */
+  overflow-y: scroll !important; /* always show scrollbar */
+  overflow-x: hidden !important; /* no horizontal scroll */
+}
+
+.page-footer {
+  padding-top: 0px !important;
 }

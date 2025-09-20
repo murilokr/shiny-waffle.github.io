@@ -39,14 +39,57 @@ function addOptionsBulk(selectSelector, items)
   reinitMaterialSelect($sel);
 }
 
+function updateParallaxCustom()
+{
+	const $parallaxImages = $('.sync-bg img');
+	const speed = 0.5; // smaller = slower parallax movement
+
+	let latestScrollTop = 0;
+	let ticking = false;
+
+	function updateParallax() {
+		$parallaxImages.css('transform', `translate3d(-50%, ${latestScrollTop * speed}px, 0)`);
+		ticking = false;
+	}
+
+	function requestTick() {
+		if (!ticking) {
+		  requestAnimationFrame(updateParallax);
+		  ticking = true;
+		}
+	}
+
+	// Update scroll position
+	function onScroll() {
+		latestScrollTop = window.scrollY || window.pageYOffset;
+		requestTick();
+	}
+
+	// Desktop and most mobile browsers
+	window.addEventListener('scroll', onScroll, { passive: true });
+
+	// iOS Safari / certain Android browsers
+	window.addEventListener('touchmove', onScroll, { passive: true });
+}
+
 
 $(document).ready(function() 
 {
 	console.log("DOM is ready, initializing selects...");
 	$('.button-collapse').sideNav();
-	$('.parallax').parallax();
 	$('select').material_select();
 	$('.dropdown-button').dropdown();
+	
+	// Enable custom parallax?
+	const customParallax = true;
+	if (!customParallax)
+	{
+		$('.parallax').parallax();
+	}
+	else
+	{		
+		updateParallaxCustom();
+	}	
 
 	// Listen for the course select dropdown.
 	$('#course-select').on('change', function() 
