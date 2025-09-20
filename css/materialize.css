@@ -2746,7 +2746,7 @@ video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 500px;
+  min-height: 100vh; /*Make sure that our image is the full viewport height (vh).*/
 }
 
 .parallax {
