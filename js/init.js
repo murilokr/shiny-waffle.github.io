@@ -49,20 +49,28 @@ function IsPortrait()
 
 function updateParallaxCustom()
 {
+	const $parallaxContainer = $('.sync-bg');
 	const $parallaxImages = $('.sync-bg img');
 	const speed = 0.5; // smaller = slower parallax movement
 
 	let latestScrollTop = 0;
 	let ticking = false;
 
-	const availableBackgrounds =
-		[
-			"img/fisio_bg3.jpeg",
-			"img/fisio_bg2.jpeg"
-		];
+	const availableBackgrounds = [
+		{
+			imgSrc: "img/fisio_bg3.jpeg",
+			imgGradient: "linear-gradient(90deg, #C1E18C 0%, #DEEDB6 25%, #EDF4CB 50%, #E9F1C8 75%, #C6E393 100%)"
+		},
+		{
+			imgSrc: "img/fisio_bg.jpeg",
+			imgGradient: "linear-gradient(90deg, #D5EAC1 0%, #C0DFA3 25%, #B6D1A4 50%, #B6D1A4 75%, #8ED575 100%)"
+		}
+	];
 	function updateBackgroundAspectRatio()
 	{
-		$parallaxImages.attr("src", availableBackgrounds[Number(IsPortrait())]);
+		var background = availableBackgrounds[Number(IsPortrait())];
+		$parallaxImages.attr("src", background.imgSrc);
+		$parallaxContainer.css('background', background.imgGradient);
 	}
 	updateBackgroundAspectRatio();
 	
