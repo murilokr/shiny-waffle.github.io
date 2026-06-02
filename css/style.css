@@ -50,10 +50,10 @@ width: 100%;
   }
 }
 
-img {
+.panelled-image {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 75%;
 }
 
 /*.sync-bg {
