@@ -32,7 +32,16 @@ width: 100%;
 	display: flow;
 }
 
+#index-banner h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
+@media only screen and (max-width:600px) {
+    .flow-text {
+        font-size: 1.1rem;
+    }
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -52,13 +61,33 @@ width: 100%;
 
 .panelled-image {
     display: block;
-    margin: auto;
-    width: 75%;
+    margin: 2rem auto;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
-.divider-partial {
-    width: 80%;
-    margin: auto;
+.divider-partial {    
+    margin-top: 25px !important;
+    margin-bottom: 15px !important;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flow-text {
+    line-height: 1.8;
+}
+
+.chip {
+    cursor: pointer;
+    margin: 5px;
+    transition: all .2s ease;
+}
+
+.chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
 
 .icon-block {
@@ -72,9 +101,21 @@ footer.page-footer {
   margin: 0;
 }
 
-.fisioterapia-green-card {
-	background-color: #769102; /* Dark Green */
-	color: white; /* Text color */
+.fisioterapia-banner {
+    background-color: #769102;
+    color: white;
+}
+
+.fisioterapia-green-card,
+.fisioterapia-white-card {
+    background-color: #769102; /* Dark Green */
+    color: white; /* Text color */
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,.10);
+}
+.fisioterapia-white-card {
+    background: #fff;
 }
 
 .inline-icon {
