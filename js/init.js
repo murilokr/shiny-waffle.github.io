@@ -49,6 +49,8 @@ function updateParallaxCustom()
 
 	function updateParallax() {
 		$parallaxImages.css('transform', `translate3d(-50%, ${latestScrollTop * speed}px, 0)`);
+		$parallaxImages.css('height', `fit-content`);
+		$parallaxImages.css('width', `fit-content`);		
 		ticking = false;
 	}
 
