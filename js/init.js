@@ -39,6 +39,14 @@ function addOptionsBulk(selectSelector, items)
   reinitMaterialSelect($sel);
 }
 
+function IsPortrait()
+{
+	var clientWidth = Math.max(window.innerWidth, document.documentElement.clientWidth);
+	var clientHeight = Math.max(window.innerHeight, document.documentElement.clientHeight);
+	return clientHeight > clientWidth;
+}
+
+
 function updateParallaxCustom()
 {
 	const $parallaxImages = $('.sync-bg img');
@@ -47,6 +55,17 @@ function updateParallaxCustom()
 	let latestScrollTop = 0;
 	let ticking = false;
 
+	const availableBackgrounds =
+		[
+			"img/fisio_bg3.jpeg",
+			"img/fisio_bg2.jpeg"
+		];
+	function updateBackgroundAspectRatio()
+	{
+		$parallaxImages.attr("src", availableBackgrounds[Number(IsPortrait())]);
+	}
+	updateBackgroundAspectRatio();
+	
 	function updateParallax() {
 		$parallaxImages.css('transform', `translate3d(-50%, ${latestScrollTop * speed}px, 0)`);
 		$parallaxImages.css('height', `fit-content`);
@@ -72,8 +91,9 @@ function updateParallaxCustom()
 
 	// iOS Safari / certain Android browsers
 	window.addEventListener('touchmove', onScroll, { passive: true });
-}
 
+	window.addEventListener('resize', updateBackgroundAspectRatio);
+}
 
 $(document).ready(function() 
 {
@@ -91,7 +111,7 @@ $(document).ready(function()
 	else
 	{		
 		updateParallaxCustom();
-	}	
+	}
 
 	// Listen for the course select dropdown.
 	$('#course-select').on('change', function() 
