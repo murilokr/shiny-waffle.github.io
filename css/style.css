@@ -56,9 +56,10 @@ width: 100%;
     width: 75%;
 }
 
-/*.sync-bg {
-    background: linear-gradient(123deg, #C1E18C 0%, #EFF6CD 50%, #C6E393 100%);
-}*/
+.divider-partial {
+    width: 80%;
+    margin: auto;
+}
 
 .icon-block {
   padding: 0 15px;

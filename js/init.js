@@ -63,7 +63,7 @@ function updateParallaxCustom()
 		},
 		{
 			imgSrc: "img/fisio_bg.jpeg",
-			imgGradient: "linear-gradient(90deg, #D5EAC1 0%, #C0DFA3 25%, #B6D1A4 50%, #B6D1A4 75%, #8ED575 100%)"
+			imgGradient: "linear-gradient(90deg, #C9E6B0 0%, #CAE8B4 25%, #DEEFCD 50%, #B1E290 75%, #9CDE7D 100%)"
 		}
 	];
 	function updateBackgroundAspectRatio()
