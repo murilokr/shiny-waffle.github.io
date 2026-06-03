@@ -50,7 +50,7 @@ function calculateScrollToTopIcon() {
 
 	var latestScrollTop = window.scrollY || window.pageYOffset;	
 	var scrollAlpha = 1 - Math.min((latestScrollTop - beginScrollY) / (endScrollY - beginScrollY), 1);
-	var scrollPx = scrollAlpha * 100;
+	var scrollPx = scrollAlpha * 80;
 
 	$floatingScroll.css('transform', `translate3d(0, ${scrollPx}px, 0)`);
 }
