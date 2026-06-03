@@ -37,9 +37,9 @@ width: 100%;
     letter-spacing: 1px;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:768px) {
     .flow-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -136,16 +136,26 @@ footer.page-footer {
 }
 
 .benefit-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     margin: 12px 0;
     font-size: 1.2rem;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.benefit-item span {
+    min-width: 0; /* allows shrinking */
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .benefit-item .material-icons {
+    vertical-align: top;
+    margin-right: 10px;
     font-size: 1.4rem;
+}
+
+.benefit-item {
+    line-height: normal !important;
 }
 
 /* Fixed height and always show vertical scrollbar */
