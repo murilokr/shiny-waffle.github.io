@@ -39,6 +39,22 @@ function addOptionsBulk(selectSelector, items)
   reinitMaterialSelect($sel);
 }
 
+function scrollToTop() {
+	$(window).scrollTop(0);
+}
+
+function calculateScrollToTopIcon() {
+	const $floatingScroll = $('.floating-scroll-top');
+	const beginScrollY = 0;
+	const endScrollY = 450;
+
+	var latestScrollTop = window.scrollY || window.pageYOffset;	
+	var scrollAlpha = 1 - Math.min((latestScrollTop - beginScrollY) / (endScrollY - beginScrollY), 1);
+	var scrollPx = scrollAlpha * 100;
+
+	$floatingScroll.css('transform', `translate3d(0, ${scrollPx}px, 0)`);
+}
+
 function IsPortrait()
 {
 	var clientWidth = Math.max(window.innerWidth, document.documentElement.clientWidth);
@@ -92,6 +108,8 @@ function updateParallaxCustom()
 	function onScroll() {
 		latestScrollTop = window.scrollY || window.pageYOffset;
 		requestTick();
+
+		calculateScrollToTopIcon();
 	}
 
 	// Desktop and most mobile browsers
@@ -148,5 +166,7 @@ $(document).ready(function()
 	
 	// Step 3: Add the courses to the select dynamically.
 	addOptionsBulk('#course-select', courses);
+
+	calculateScrollToTopIcon();
 });
 
