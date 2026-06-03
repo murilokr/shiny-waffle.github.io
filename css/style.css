@@ -38,6 +38,7 @@ width: 100%;
 }
 
 @media only screen and (max-width:768px) {
+    .benefit-item span,
     .flow-text {
         font-size: 1rem;
     }
