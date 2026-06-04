@@ -12,15 +12,15 @@ html {
 
 nav ul a,
 nav .brand-logo {
-  color: #444;
+    color: #444;
 }
 
 p {
-  line-height: 2rem;
+    line-height: 2rem;
 }
 
 .button-collapse {
-  color: #26a69a;
+    color: #26a69a;
 }
 
 h4 {
@@ -28,12 +28,17 @@ h4 {
 }
 
 .parallax-container {
-  line-height: 0;
-  color: rgba(255,255,255,.9);
+    line-height: 0;
+    color: rgba(255,255,255,.9);
+}
+
+.parallax-container .fisioterapia-white-card {
+    /*color: #17D657;*/
+    color: #02915C;
 }
 
 .parallax-container .section {
-width: 100%;
+    width: 100%;
 }
 
 .parallax sync-bg {
@@ -58,19 +63,20 @@ width: 100%;
 }
 
 @media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        top: 10%;
+    }
 }
 
 @media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+    #index-banner .section {
+        top: 0;
+    }
 }
 
 .panelled-image {
@@ -81,7 +87,7 @@ width: 100%;
     box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
-.divider-partial {    
+.divider-partial {
     margin-top: 25px !important;
     margin-bottom: 15px !important;
     width: 60%;
@@ -101,18 +107,20 @@ width: 100%;
 }
 
 .chip,
+.floating .btn-floating,
 .floating-scroll-top .btn-floating {
-    background-color: #9EC103 !important;
+    background-color: #03B571 !important;
 }
 
 .chip:hover,
+.floating:hover .btn-floating:hover,
 .floating-scroll-top:hover .btn-floating:hover {
-    background-color: #769102 !important;
+    background-color: #02915C !important;
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0,0,0,.15);
-    
 }
 
+.floating,
 .floating-scroll-top {
     right: 15px;
     bottom: 15px;
@@ -121,34 +129,44 @@ width: 100%;
 .icon-block {
     padding: 0 15px;
 }
+
 .icon-block .material-icons {
-  font-size: inherit;
+    font-size: inherit;
 }
 
 footer.page-footer {
-  margin: 0;
+    margin: 0;
 }
 
 .fisioterapia-banner {
-    background-color: #769102;
+    /*background-color: #17D657;*/
+    background: #02915C;
     color: white;
 }
 
+/*#769102*/
+
 .fisioterapia-green-card,
-.fisioterapia-white-card {
-    background-color: #769102; /* Dark Green */
+.fisioterapia-white-card,
+.fisioterapia-dark-green-card {
+    background-color: #17D657; /* Light Green */
     color: white; /* Text color */
     border-radius: 20px;
     padding: 1.5rem;
     box-shadow: 0 6px 18px rgba(0,0,0,.10);
 }
+
 .fisioterapia-white-card {
     background: #fff;
 }
 
+.fisioterapia-dark-green-card {
+    background: #02915C;
+}
+
 .inline-icon {
-  height: 1em;          /* Matches the font size */
-  vertical-align: middle; /* Aligns nicely with the text baseline */
+    height: 1em; /* Matches the font size */
+    vertical-align: middle; /* Aligns nicely with the text baseline */
 }
 
 .no-margin-top {
@@ -170,17 +188,17 @@ footer.page-footer {
     flex-wrap: wrap;
 }
 
-.benefit-item span {
-    min-width: 0; /* allows shrinking */
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
+    .benefit-item span {
+        min-width: 0; /* allows shrinking */
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
 
-.benefit-item .material-icons {
-    vertical-align: top;
-    margin-right: 10px;
-    font-size: 1.4rem;
-}
+    .benefit-item .material-icons {
+        vertical-align: top;
+        margin-right: 10px;
+        font-size: 1.4rem;
+    }
 
 .benefit-item {
     line-height: normal !important;
@@ -188,24 +206,24 @@ footer.page-footer {
 
 /* Fixed height and always show vertical scrollbar */
 .select-wrapper ul.dropdown-content.select-dropdown {
-  max-height: calc(100vh * .4) !important; /* or whatever height you want */
-  min-height: calc(100vh * .4) !important; /* ensures it's always at least this tall */
-  overflow-y: scroll !important; /* always show scrollbar */
-  overflow-x: hidden !important; /* no horizontal scroll */
+    max-height: calc(100vh * .4) !important; /* or whatever height you want */
+    min-height: calc(100vh * .4) !important; /* ensures it's always at least this tall */
+    overflow-y: scroll !important; /* always show scrollbar */
+    overflow-x: hidden !important; /* no horizontal scroll */
 }
 
 .page-footer {
-  padding-top: 0px !important;
+    padding-top: 0px !important;
 }
 
 /* Force dropdown to be above banner and footer */
 ul.dropdown-content.select-dropdown {
-  z-index: 9999 !important; /* way higher than banner or footer */
-  position: absolute !important;
+    z-index: 9999 !important; /* way higher than banner or footer */
+    position: absolute !important;
 }
 
 #index-banner,
 footer.page-footer {
-  z-index: 10; /* keep it high enough for layout, but below dropdown */
-  position: relative;
+    z-index: 10; /* keep it high enough for layout, but below dropdown */
+    position: relative;
 }
