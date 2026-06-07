@@ -33,7 +33,6 @@ h4 {
 }
 
 .parallax-container .fisioterapia-white-card {
-    /*color: #17D657;*/
     color: #02915C;
 }
 
@@ -42,6 +41,7 @@ h4 {
 }
 
 .parallax sync-bg {
+    background: linear-gradient(90deg, #C9E6B0 0%, #CAE8B4 25%, #DEEFCD 50%, #B1E290 75%, #9CDE7D 100%);
     background-position: center center;
 }
 
