@@ -121,6 +121,31 @@ function updateParallaxCustom()
 	window.addEventListener('resize', updateBackgroundAspectRatio);
 }
 
+function checkShowCoachmark() {
+	const coachmark = document.getElementById("references-coachmark");
+    const button = document.getElementById("references-btn");
+    const closeBtn = document.querySelector(".coachmark-close");
+
+    if (localStorage.getItem("referencesCoachmarkSeen")) {
+        coachmark.style.display = "none";
+        return;
+    }
+
+    function dismissCoachmark() {
+        localStorage.setItem("referencesCoachmarkSeen", "true");
+
+		coachmark.addEventListener("animationend", function handler() {
+			coachmark.style.display = "none";
+			coachmark.removeEventListener("animationend", handler);
+		});
+		coachmark.classList.add("fade-out");
+    }
+
+    coachmark.addEventListener("click", dismissCoachmark);
+    closeBtn.addEventListener("click", dismissCoachmark);
+    button.addEventListener("click", dismissCoachmark);
+}
+
 $(document).ready(function() 
 {
 	console.log("DOM is ready, initializing selects...");
@@ -168,5 +193,7 @@ $(document).ready(function()
 	addOptionsBulk('#course-select', courses);
 
 	calculateScrollToTopIcon();
+
+	checkShowCoachmark();
 });
 

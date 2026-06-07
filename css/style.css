@@ -127,6 +127,7 @@ h4 {
 
 .floating,
 .floating-scroll-top {
+    position: fixed;
     right: 15px;
     bottom: 15px;
 }
@@ -261,4 +262,72 @@ footer.page-footer {
 
 .references-page a {
     word-break: break-word;
+}
+
+/* For coachmark setup */
+.coachmark {
+    position: absolute;
+    right: 80px;
+    top: 20px;
+    z-index: 9999;
+    max-width: 260px;
+    width: max-content;
+    padding: 14px 18px;
+    background-color: #03B571 !important;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.10);
+    font-size: .95rem;
+    line-height: 1.4;
+    animation: coachmarkFade .5s ease;
+}
+
+.coachmark-arrow {
+    position: absolute;
+    right: -9px;
+    bottom: 3px;
+    width: 40px;
+    height: 40px;
+    background-color: #03B571 !important;
+    transform: rotate(45deg);
+    border-radius: 12px 0 12px 0;
+    z-index: -1;
+}
+
+.coachmark-close {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@keyframes coachmarkFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes coachmarkFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.coachmark.fade-out {
+    animation: coachmarkFadeOut .4s ease forwards;
 }
