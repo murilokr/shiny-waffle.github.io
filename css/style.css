@@ -227,3 +227,25 @@ footer.page-footer {
     z-index: 10; /* keep it high enough for layout, but below dropdown */
     position: relative;
 }
+
+
+/* For references page */
+.references-page h5 {
+    margin-top: 2rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,.15);
+    padding-bottom: .5rem;
+}
+
+.references-page ol {
+    padding-left: 1.5rem;
+}
+
+.references-page li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.references-page a {
+    word-break: break-word;
+}
