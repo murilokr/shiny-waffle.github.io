@@ -55,10 +55,17 @@ h3{
     letter-spacing: 1px;
 }
 
+.green-link {
+    text-decoration: underline;
+    color: #9ede7f;
+}
+
+.no-underline {
+    text-decoration: none;
+}
 
 @media only screen and (max-width:768px) {
-    .benefit-item span,
-    .flow-text {
+    .benefit-item span, .flow-text {
         font-size: 1rem;
     }
 }
