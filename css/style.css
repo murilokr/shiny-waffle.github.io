@@ -87,6 +87,11 @@ h4 {
     box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
+.inpanel-image {
+    height: fit-content;
+    width: fit-content;
+}
+
 .divider-partial {
     margin-top: 25px !important;
     margin-bottom: 15px !important;
@@ -139,12 +144,10 @@ footer.page-footer {
 }
 
 .fisioterapia-banner {
-    /*background-color: #17D657;*/
     background: #02915C;
     color: white;
 }
 
-/*#769102*/
 
 .fisioterapia-green-card,
 .fisioterapia-white-card,
@@ -164,15 +167,25 @@ footer.page-footer {
     background: #02915C;
 }
 
+.fisioterapia-dark-green-card .divider {
+    background-color: white;
+}
+
+.fisioterapia-white-card .divider {
+    background-color: #02915C;
+}
+
 .inline-icon {
     height: 1em; /* Matches the font size */
     vertical-align: middle; /* Aligns nicely with the text baseline */
 }
 
+.no-margin,
 .no-margin-top {
     margin-top: 0px;
 }
 
+.no-margin,
 .no-margin-bottom {
     margin-bottom: 0px;
 }
